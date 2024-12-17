@@ -14,8 +14,7 @@ public static class ServiceCollectionExtensions
             {
                 client.BaseAddress = new Uri("https://www.swapi.tech/api/");
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
-            })
-            .AddHttpMessageHandler<PollyHandler>();
+            }).AddHttpMessageHandler<PollyHandler>();
     }
 
     public static void AddServices(this IServiceCollection services)
